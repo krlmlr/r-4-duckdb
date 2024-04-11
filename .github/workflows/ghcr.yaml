@@ -57,7 +57,7 @@ jobs:
           context: .
           cache-from: ${{ ( github.event_name != 'schedule' || github.event_name != 'workflow_dispatch' ) && 'type=gha' || '' }}
           cache-to: type=gha,mode=max
-          build-args: r-ver=${{ matrix.version }}
+          build-args: r_ver=${{ matrix.version }}
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
