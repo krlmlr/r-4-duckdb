@@ -52,7 +52,7 @@ jobs:
 
       - name: Build and push Docker image
         uses: docker/build-push-action@f2a1d5e99d037542a71f64918e516c093c6f3fc4
-        timeout-minutes: 10
+        timeout-minutes: 60
         with:
           context: .
           cache-from: ${{ ( github.event_name != 'schedule' || github.event_name != 'workflow_dispatch' ) && 'type=gha' || '' }}
